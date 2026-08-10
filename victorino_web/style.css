@@ -1,0 +1,256 @@
+/* Fuente base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0a0a0a;
+    color: #f5f5f5;
+}
+
+/* Contenedor general */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #8b0000;
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-branding .logo {
+    font-size: 26px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 20px;
+}
+
+/* Navegación */
+.header-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headermenu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.headermenu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.headermenu ul li a:hover,
+.headermenu ul li.active a {
+    color: #f0ebeb;
+}
+
+.contact-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding-right: 20px;
+}
+
+.contact-info a {
+    color: rgb(238, 238, 238);
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #ffd700;
+}
+
+/* Banner */
+.banner {
+    background: url('images/banner.jpg') no-repeat center center/cover;
+    color: rgb(201, 6, 6);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.bannercontent h3 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.bannercontent h2 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+.bannercontent p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+/* Nosotros */
+.about {
+    padding: 60px 0;
+    background-color: #0d0d0e;
+}
+
+.contentinline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.contentinline .text {
+    flex: 1;
+}
+
+.contentinline .imagearea {
+    flex: 1;
+}
+
+.contentinline img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about ul li::before {
+    content: "🍽️ ";
+}
+
+/* Menú */
+.foodmenu {
+    background-color: hsl(0, 94%, 42%);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.foodmenu h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.foodmenu h4 {
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.menuitems_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.menuitems_wrap .item {
+    background: #000; /* cambiado a negro */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px hwb(0 3% 97%);
+    padding: 20px;
+    max-width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.menuitems_wrap .item:hover {
+    transform: scale(1.05);
+}
+
+.menuitems_wrap img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.menuitems_wrap h5 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+.menuitems_wrap p {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+/* Contacto */
+.contactsection {
+    background-color: #0c0c0c;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contactsection h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contactsection h4 {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.contactform input[type="submit"] {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #8b0000;
+    color: #0e0d0d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contactform input[type="submit"]:hover {
+    background-color: #aa0000;
+}
+
+/* Mapa */
+.maparea {
+    margin-top: 0;
+}
+
+.mapheading {
+    background-color: #8b0000;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-right {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contentinline {
+        flex-direction: column;
+    }
+
+    .menuitems_wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+}
